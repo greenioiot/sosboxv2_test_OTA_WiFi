@@ -234,8 +234,8 @@ void clearInbox() {
 /**********************************************  WIFI Client 注意编译时要设置此值 *********************************
    wifi client
 */
-const char* ssid = "greenio"; //replace "xxxxxx" with your WIFI's ssid
-const char* password = "greenio7650"; //replace "xxxxxx" with your WIFI's password
+const char* ssid = "greenioGuest"; //replace "xxxxxx" with your WIFI's ssid
+const char* password = "green7650"; //replace "xxxxxx" with your WIFI's password
 
 //WiFi&OTA 参数
 #define HOSTNAME "SOSBoxByTBK_BeTa"
@@ -1151,7 +1151,7 @@ void sendSMS(boolean isExceed) {
 
   if (strlen(phone2) > 0 ) {
     Serial.println("send2");
-    res = modem.sendSMS(phone1, sms );
+    res = modem.sendSMS(phone2, sms );
     Serial.println(res);
     if (res)
       drawStatus("Send SMS Success");
@@ -1163,7 +1163,7 @@ void sendSMS(boolean isExceed) {
 
   if (strlen(phone3) > 0 ) {
     Serial.println("send3");
-    res = modem.sendSMS(phone1, sms );
+    res = modem.sendSMS(phone3, sms );
     Serial.println(res);
     if (res)
       drawStatus("Send SMS Success");
@@ -1173,7 +1173,7 @@ void sendSMS(boolean isExceed) {
   }
   if (strlen(phone4) > 0 ) {
     Serial.println("send4");
-    res = modem.sendSMS(phone1, sms );
+    res = modem.sendSMS(phone4, sms );
     Serial.println(res);
     if (res)
       drawStatus("Send SMS Success");
@@ -1184,7 +1184,7 @@ void sendSMS(boolean isExceed) {
   }
   if (strlen(phone5) > 0 ) {
     Serial.println("send5");
-    res = modem.sendSMS(phone1, sms );
+    res = modem.sendSMS(phone5, sms );
     Serial.println(res);
     if (res)
       drawStatus("Send SMS Success");
